@@ -2,31 +2,32 @@
 
 // define a function click event handler
 
-// function clickEventHandler(event) {
-//     event.preventDefault(); 
-//     console.log(event.type + '!!!!!!!!!!'); 
-//     console.log(event.target);
-//     console.log(event.currentTarget); 
+function clickEventHandler(event) {
+    event.preventDefault(); 
+    console.log(event.type + '!!!!!!!!!!'); 
+    console.log(event.target);
+    console.log(event.currentTarget); 
     
-//     // you can grab ANY element in the DOM
-//     // you can do ANYTHING you want with it
-//     // you can create new elements and attach them to the DOM
-//     // you can destroy any part of the website
-//     // you can trigger network requests to send data to the server
-//     // animations
-//     // analytics
-// }
+    // you can grab ANY element in the DOM
+    // you can do ANYTHING you want with it
+    // you can create new elements and attach them to the DOM
+    // you can destroy any part of the website
+    // you can trigger network requests to send data to the server
+    // animations
+    // analytics
+    
+}
 
-// console.log(homeLink)
-// homeLink.addEventListener('click',// string with the name of the event 
-// clickEventHandler); 
-// document.querySelector('a').addEventListener('click', event => {
-//     // we are going to sabotage bubbling
-//     // event.preventDefault? 
+console.log(homeLink)
+homeLink.addEventListener('click',// string with the name of the event 
+clickEventHandler); 
+document.querySelector('a').addEventListener('click', event => {
+    // we are going to sabotage bubbling
+    // event.preventDefault? 
 
-//     event.stopPropagation()
-//     console.log('hahaha, sabotaging propogation !!')
-// })
+    event.stopPropagation()
+    console.log('hahaha, sabotaging propogation !!')
+})
 
 // document.querySelector('nav').addEventListener('click', clickEventHandler); 
 
@@ -98,3 +99,60 @@ function zoom(event) {
 let scale = 1; 
 funBus.addEventListener('wheel', zoom); 
 
+// keydown event used below 
+
+// let keyP = document.querySelector('.keydown-p'); 
+
+const theBod = document.querySelector('body'); 
+
+theBod.addEventListener('keyup', () => {
+    theBod.style.backgroundColor = 'yellow'; 
+})
+
+
+
+// drag/drop event used below
+
+
+// load event used below 
+
+const log = document.querySelector('.event-log-contents');
+const reload = document.querySelector('#reload');
+
+reload.addEventListener('click', () => {
+    log.textContent ='';
+    window.setTimeout(() => {
+        window.location.reload(true);
+    }, 400);
+});
+
+window.addEventListener('load', () => {
+    log.textContent = log.textContent + 'load\n';
+});
+
+// focus event used below
+
+const form = document.getElementById('form');
+
+form.addEventListener('focus', (event) => {
+  event.target.style.background = 'pink';    
+}, true);
+
+form.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+}, true);
+
+// blur event inside of dblclick event used below
+
+const header = document.querySelector('header'); 
+
+header.addEventListener('click', event => {
+    header.style.backgroundColor = 'red';
+    event.stopPropogation(); 
+})
+
+
+// scroll event used below
+
+
+// select event used below
