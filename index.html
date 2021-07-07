@@ -22,7 +22,7 @@
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
+        <a id="homeLink" class="nav-link" href="https://www.youtube.com/">Home</a>
         <a class="nav-link" href="#">About Us</a>
         <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contact</a>
@@ -35,6 +35,7 @@
       <img src="img/fun-bus.jpg" alt="bus in the sand">
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
+      <p class="keydown-p">You better not click here and press a, b, c or d</p>
     </header>
     <section class="content-section">
       <div class="text-content">
@@ -78,8 +79,26 @@
         <h4>Island Getaway</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
         <div class="btn">Sign Me Up!</div>
+        <form id="form">
+          <input type="text" placeholder="text input">
+          <input type="password" placeholder="password">
+        </form>
       </div>
+
     </section>
+
+    <section class="reload-sect">
+      <div class="controls">
+        <button id="reload" type="button">Reload</button>
+      </div>
+      
+      <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+      </div>
+
+    </section>
+    
   </div><!-- container -->
 
   <footer class="footer">

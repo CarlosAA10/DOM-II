@@ -350,3 +350,9 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.home .content-pick #form {
+  margin-top: 3%;
+}
+.home .reload-sect {
+  display: flex;
+}
